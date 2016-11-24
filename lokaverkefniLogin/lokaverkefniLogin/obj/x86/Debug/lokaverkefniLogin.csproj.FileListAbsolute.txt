@@ -1,0 +1,8 @@
+C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\lokaverkefniLogin\lokaverkefniLogin\bin\Debug\lokaverkefniLogin.exe
+C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\lokaverkefniLogin\lokaverkefniLogin\bin\Debug\lokaverkefniLogin.pdb
+C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.Form1.resources
+C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.Properties.Resources.resources
+C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.csproj.GenerateResource.Cache
+C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.exe
+C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.pdb
+C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.Form2.resources
