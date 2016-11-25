@@ -5,3 +5,4 @@ C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\LokaverkefniServer\LokaverkefniSe
 C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\LokaverkefniServer\LokaverkefniServer\bin\Debug\LokaverkefniServer.exe.config
 C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\LokaverkefniServer\LokaverkefniServer\bin\Debug\MySql.Data.dll
 C:\Users\Emil\Desktop\tskoli\LokaverkefniH2016\LokaverkefniServer\LokaverkefniServer\obj\x86\Debug\LokaverkefniServer.csprojResolveAssemblyReference.cache
+H:\lokaverk\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\bin\Debug\LokaverkefniServer.exe.config
