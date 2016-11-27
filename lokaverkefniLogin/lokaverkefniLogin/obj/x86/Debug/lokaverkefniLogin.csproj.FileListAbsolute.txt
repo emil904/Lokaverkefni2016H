@@ -15,3 +15,12 @@ H:\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x
 H:\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.csproj.GenerateResource.Cache
 H:\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.exe
 H:\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.pdb
+C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.exe
+C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.pdb
+C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\bin\Debug\lokaverkefniLogin.exe
+C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\bin\Debug\lokaverkefniLogin.pdb
+C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.csprojResolveAssemblyReference.cache
+C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.Form1.resources
+C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.Form2.resources
+C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.Properties.Resources.resources
+C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\lokaverkefniLogin\lokaverkefniLogin\obj\x86\Debug\lokaverkefniLogin.csproj.GenerateResource.Cache
