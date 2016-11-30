@@ -19,6 +19,7 @@ namespace LokaverkefniServer
         private BinaryWriter writer = null;
         private BinaryReader reader = null;
         static dbClass db = new dbClass(); //býr til db object
+        private bool connected = false;
 
         static void Main(string[] args)
         {
@@ -41,13 +42,15 @@ namespace LokaverkefniServer
                 listener.Start();
                 Console.WriteLine("Waiting for connections ...");
 
-                while(true)
+                while(connected == false)
                 {
                     connection = listener.AcceptSocket();
                     counter++;
                     Console.WriteLine("User connected. There are currently " + counter + " users connected");
                     readThread = new Thread(new ThreadStart(GetClient));
+                    readThread.Start();
                 }
+                
             }
             catch (Exception)
             {
@@ -67,22 +70,22 @@ namespace LokaverkefniServer
                 writer = new BinaryWriter(socketStream);
                 
                 message = reader.ReadString(); //Hér koma email + password í breytuna í email:password formatti.
-                Console.WriteLine(message);
                 validateUser(message);
 
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.ToString());
             }
-            finally
+            /*finally
             {
                 reader.Close();
                 writer.Close();
                 socketStream.Close();
                 socket.Close();
             }
+             */
+             
         }
         
         public void validateUser(string toValidate)
@@ -93,10 +96,11 @@ namespace LokaverkefniServer
             
             string[] splitValidated = validated.Split(':'); //Splitta validated breytunni svo hægt sé að compare'a
 
-            if (splitValidated[0] + splitValidated[1] == splitInfo[0] + splitInfo[1])
+            if (splitValidated[0] + splitValidated[1] == splitInfo[0] + splitInfo[1]) //hér compareum við breytuna.
             {
-                Console.WriteLine("User verified.");
-                writer.Write("User verified.");
+                
+                Console.WriteLine("User " + splitInfo[1] + " verified.");
+                writer.Write("User validated.");
             }
         }
     }

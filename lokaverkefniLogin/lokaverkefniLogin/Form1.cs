@@ -37,28 +37,24 @@ namespace lokaverkefniLogin
                 
                 do
                 {
-                    try
-                    {
-                        clientInput = emailTextBox.Text + ":" + passwordTextBox.Text;
-                        writer.Write(clientInput);
-                        message = reader.ReadString();
-                        if (message == "User validated.")
-                        {
-                            this.Hide();
-                            Form2 clientWindow = new Form2();
-                            clientWindow.Show();
-                        }
-                        else
-                        {
-                            errorLabel.Text = "Incorrect username or password, please try again.";
-                        }
-                        message = reader.ReadString();
+                     clientInput = emailTextBox.Text + ":" + passwordTextBox.Text;
+                     writer.Write(clientInput);
+                     message = reader.ReadString();
+                     if (message == "User validated.")
+                     {
+                         this.Invoke(new MethodInvoker(this.Hide));
+                         Form2 clientWindow = new Form2();
+                         clientWindow.Show();
+                     }
+                     else
+                     {
+                         labelInvoke("Incorrect username or password, please try again.");
+                         emailTextBox.Text = "";
+                         passwordTextBox.Text = "";
                          
-                    }
-                    catch (Exception error)
-                    {
-                        MessageBox.Show(error.ToString());
-                    }
+                     }
+                     message = reader.ReadString();
+                    
                 } while (message != "User validated.");
                 
                 
@@ -88,5 +84,14 @@ namespace lokaverkefniLogin
             
         }
 
+        public void labelInvoke(string value) //Method til að geta breytt um texta í errorLabel úr öðrum en "main" þræði.
+        {
+            if (errorLabel.InvokeRequired)
+            {
+                this.BeginInvoke(new Action<string>(labelInvoke), new object[] { value });
+                return;
+            }
+            errorLabel.Text += value;
+        }
     }
 }
