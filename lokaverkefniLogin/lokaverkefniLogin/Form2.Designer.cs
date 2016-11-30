@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtUsers = new System.Windows.Forms.TextBox();
             this.txtChatbox = new System.Windows.Forms.TextBox();
             this.txtMessagebox = new System.Windows.Forms.TextBox();
             this.btSend = new System.Windows.Forms.Button();
+            this.listBoxUsers = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // txtUsers
-            // 
-            this.txtUsers.Location = new System.Drawing.Point(13, 13);
-            this.txtUsers.Multiline = true;
-            this.txtUsers.Name = "txtUsers";
-            this.txtUsers.Size = new System.Drawing.Size(133, 408);
-            this.txtUsers.TabIndex = 0;
             // 
             // txtChatbox
             // 
@@ -66,19 +58,28 @@
             this.btSend.Text = "Send";
             this.btSend.UseVisualStyleBackColor = true;
             // 
+            // listBoxUsers
+            // 
+            this.listBoxUsers.FormattingEnabled = true;
+            this.listBoxUsers.Location = new System.Drawing.Point(13, 13);
+            this.listBoxUsers.Name = "listBoxUsers";
+            this.listBoxUsers.Size = new System.Drawing.Size(134, 407);
+            this.listBoxUsers.TabIndex = 4;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(594, 433);
+            this.Controls.Add(this.listBoxUsers);
             this.Controls.Add(this.btSend);
             this.Controls.Add(this.txtMessagebox);
             this.Controls.Add(this.txtChatbox);
-            this.Controls.Add(this.txtUsers);
             this.Name = "Form2";
             this.Text = "Lokaverkefni -Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,9 +87,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUsers;
         private System.Windows.Forms.TextBox txtChatbox;
         private System.Windows.Forms.TextBox txtMessagebox;
         private System.Windows.Forms.Button btSend;
+        private System.Windows.Forms.ListBox listBoxUsers;
     }
 }

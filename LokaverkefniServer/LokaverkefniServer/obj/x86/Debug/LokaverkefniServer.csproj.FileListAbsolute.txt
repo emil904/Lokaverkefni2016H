@@ -13,3 +13,10 @@ C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniSer
 C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\obj\x86\Debug\LokaverkefniServer.csprojResolveAssemblyReference.cache
 C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\obj\x86\Debug\LokaverkefniServer.exe
 C:\Users\emil\Desktop\tskoli\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\obj\x86\Debug\LokaverkefniServer.pdb
+H:\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\bin\Debug\LokaverkefniServer.exe.config
+H:\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\obj\x86\Debug\LokaverkefniServer.exe
+H:\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\obj\x86\Debug\LokaverkefniServer.pdb
+H:\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\bin\Debug\LokaverkefniServer.exe
+H:\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\bin\Debug\LokaverkefniServer.pdb
+H:\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\bin\Debug\MySql.Data.dll
+H:\Lokaverkefni2016H\Lokaverkefni2016H\LokaverkefniServer\LokaverkefniServer\obj\x86\Debug\LokaverkefniServer.csprojResolveAssemblyReference.cache

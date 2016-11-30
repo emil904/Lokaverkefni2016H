@@ -53,23 +53,14 @@ namespace lokaverkefniLogin
                          passwordTextBox.Text = "";
                          
                      }
-                     message = reader.ReadString();
                     
                 } while (message != "User validated.");
-                
                 
             } // end try
             catch (Exception error)
             {
                 MessageBox.Show(error.ToString());
-            } // end catch           
-            finally
-            {
-                reader.Close();
-                writer.Close();
-                output.Close();
-                client.Close();
-            }
+            } 
              
         }
 
