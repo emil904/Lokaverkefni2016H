@@ -76,27 +76,24 @@ namespace LokaverkefniServer
             string lina = null;
             if (OpenConnect() == true)
             {
-                fyrirspurn = "SELECT USER_EMAIL,USERNAME,USER_PASSWORD FROM users WHERE USER_EMAIL='" + email + "' AND USER_PASSWORD='" + password + "'";
-                newSQLCommand = new MySqlCommand(fyrirspurn, sqltenging);
-                sqllesari = newSQLCommand.ExecuteReader();
-                while (sqllesari.Read())
-                {
-                    for (int i = 0; i < sqllesari.FieldCount; i++)
+                    fyrirspurn = "SELECT USER_EMAIL,USERNAME,USER_PASSWORD FROM users WHERE USER_EMAIL='" + email + "' AND USER_PASSWORD='" + password + "'";
+                    newSQLCommand = new MySqlCommand(fyrirspurn, sqltenging);
+                    sqllesari = newSQLCommand.ExecuteReader();
+                    while (sqllesari.Read())
                     {
-                        lina += (sqllesari.GetValue(i).ToString()) + ":";
+                        for (int i = 0; i < sqllesari.FieldCount; i++)
+                        {
+                            lina += (sqllesari.GetValue(i).ToString()) + ":";
+                        }
                     }
-                }
+                    if (lina == null)
+                    {
+                        lina = "U/P incorrect";
+                    }
 
                 CloseConnect();
             }
             return lina;
-        }
-
-
-
-        internal void userRegister()
-        {
-            throw new NotImplementedException();
         }
     }
 }

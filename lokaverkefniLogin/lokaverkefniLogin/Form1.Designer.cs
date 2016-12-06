@@ -33,18 +33,20 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtSignupEmail = new System.Windows.Forms.TextBox();
-            this.txtSignupPass = new System.Windows.Forms.TextBox();
-            this.btSignup = new System.Windows.Forms.Button();
+            this.SignupEmailTextBox = new System.Windows.Forms.TextBox();
+            this.SignupPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.signupButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.SignupDisplayNameTextBox = new System.Windows.Forms.TextBox();
+            this.regErrorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // loginButton
@@ -52,7 +54,7 @@
             this.loginButton.Location = new System.Drawing.Point(390, 125);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(75, 23);
-            this.loginButton.TabIndex = 0;
+            this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Sign in";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
@@ -62,7 +64,7 @@
             this.exitButton.Location = new System.Drawing.Point(483, 125);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
-            this.exitButton.TabIndex = 1;
+            this.exitButton.TabIndex = 4;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
@@ -85,20 +87,20 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Email :";
             // 
-            // passwordTextBox
+            // PasswordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(390, 99);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(168, 20);
-            this.passwordTextBox.TabIndex = 4;
+            this.PasswordTextBox.Location = new System.Drawing.Point(390, 99);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
+            this.PasswordTextBox.Size = new System.Drawing.Size(168, 20);
+            this.PasswordTextBox.TabIndex = 2;
             // 
-            // emailTextBox
+            // EmailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(390, 73);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(168, 20);
-            this.emailTextBox.TabIndex = 5;
+            this.EmailTextBox.Location = new System.Drawing.Point(390, 73);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(168, 20);
+            this.EmailTextBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -121,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(339, 215);
+            this.label4.Location = new System.Drawing.Point(346, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 7;
@@ -130,49 +132,50 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(318, 244);
+            this.label5.Location = new System.Drawing.Point(325, 273);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Password :";
             // 
-            // txtSignupEmail
+            // SignupEmailTextBox
             // 
-            this.txtSignupEmail.Location = new System.Drawing.Point(390, 215);
-            this.txtSignupEmail.Name = "txtSignupEmail";
-            this.txtSignupEmail.Size = new System.Drawing.Size(168, 20);
-            this.txtSignupEmail.TabIndex = 9;
+            this.SignupEmailTextBox.Location = new System.Drawing.Point(390, 216);
+            this.SignupEmailTextBox.Name = "SignupEmailTextBox";
+            this.SignupEmailTextBox.Size = new System.Drawing.Size(168, 20);
+            this.SignupEmailTextBox.TabIndex = 5;
             // 
-            // txtSignupPass
+            // SignupPasswordTextBox
             // 
-            this.txtSignupPass.Location = new System.Drawing.Point(390, 244);
-            this.txtSignupPass.Name = "txtSignupPass";
-            this.txtSignupPass.Size = new System.Drawing.Size(168, 20);
-            this.txtSignupPass.TabIndex = 10;
+            this.SignupPasswordTextBox.Location = new System.Drawing.Point(390, 270);
+            this.SignupPasswordTextBox.Name = "SignupPasswordTextBox";
+            this.SignupPasswordTextBox.Size = new System.Drawing.Size(168, 20);
+            this.SignupPasswordTextBox.TabIndex = 7;
             // 
-            // btSignup
+            // signupButton
             // 
-            this.btSignup.Location = new System.Drawing.Point(390, 270);
-            this.btSignup.Name = "btSignup";
-            this.btSignup.Size = new System.Drawing.Size(168, 23);
-            this.btSignup.TabIndex = 11;
-            this.btSignup.Text = "Sign up!";
-            this.btSignup.UseVisualStyleBackColor = true;
+            this.signupButton.Location = new System.Drawing.Point(390, 296);
+            this.signupButton.Name = "signupButton";
+            this.signupButton.Size = new System.Drawing.Size(168, 23);
+            this.signupButton.TabIndex = 8;
+            this.signupButton.Text = "Sign up!";
+            this.signupButton.UseVisualStyleBackColor = true;
+            this.signupButton.Click += new System.EventHandler(this.signupButton_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Location = new System.Drawing.Point(309, 245);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "label6";
+            this.label6.Text = "Display Name:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(391, 176);
+            this.label7.Location = new System.Drawing.Point(391, 162);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 20);
             this.label7.TabIndex = 13;
@@ -188,24 +191,43 @@
             this.errorLabel.Size = new System.Drawing.Size(0, 13);
             this.errorLabel.TabIndex = 14;
             // 
+            // SignupDisplayNameTextBox
+            // 
+            this.SignupDisplayNameTextBox.Location = new System.Drawing.Point(390, 242);
+            this.SignupDisplayNameTextBox.Name = "SignupDisplayNameTextBox";
+            this.SignupDisplayNameTextBox.Size = new System.Drawing.Size(168, 20);
+            this.SignupDisplayNameTextBox.TabIndex = 6;
+            // 
+            // regErrorLabel
+            // 
+            this.regErrorLabel.AutoSize = true;
+            this.regErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regErrorLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.regErrorLabel.Location = new System.Drawing.Point(325, 195);
+            this.regErrorLabel.Name = "regErrorLabel";
+            this.regErrorLabel.Size = new System.Drawing.Size(0, 20);
+            this.regErrorLabel.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(617, 330);
+            this.Controls.Add(this.regErrorLabel);
+            this.Controls.Add(this.SignupDisplayNameTextBox);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btSignup);
-            this.Controls.Add(this.txtSignupPass);
-            this.Controls.Add(this.txtSignupEmail);
+            this.Controls.Add(this.signupButton);
+            this.Controls.Add(this.SignupPasswordTextBox);
+            this.Controls.Add(this.SignupEmailTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.EmailTextBox);
+            this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitButton);
@@ -223,18 +245,20 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtSignupEmail;
-        private System.Windows.Forms.TextBox txtSignupPass;
-        private System.Windows.Forms.Button btSignup;
+        private System.Windows.Forms.TextBox SignupEmailTextBox;
+        private System.Windows.Forms.TextBox SignupPasswordTextBox;
+        private System.Windows.Forms.Button signupButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.TextBox SignupDisplayNameTextBox;
+        private System.Windows.Forms.Label regErrorLabel;
     }
 }
 

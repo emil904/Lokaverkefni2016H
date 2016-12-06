@@ -13,11 +13,14 @@ namespace lokaverkefniLogin
 {
     public partial class Form1 : Form
     {
-        private NetworkStream output;
-        private BinaryWriter writer;
-        private BinaryReader reader;
-        private string message = "";
-        private string clientInput = "";
+        public NetworkStream output;
+        public BinaryWriter writer;
+        public BinaryReader reader;
+        public string message;
+        public string clientInput;
+        private bool done = false;
+        public string username;
+        public string usersstring;
             
         public Form1()
         {
@@ -30,59 +33,106 @@ namespace lokaverkefniLogin
             try
             {
                 client = new TcpClient();
-                client.Connect("localhost", 50000);
+                client.Connect("89.17.134.18", 50000);
                 output = client.GetStream();
                 writer = new BinaryWriter(output);
                 reader = new BinaryReader(output);
-                
-                do
-                {
-                     clientInput = emailTextBox.Text + ":" + passwordTextBox.Text;
-                     writer.Write(clientInput);
-                     message = reader.ReadString();
-                     if (message == "User validated.")
-                     {
-                         this.Invoke(new MethodInvoker(this.Hide));
-                         Form2 clientWindow = new Form2();
-                         clientWindow.Show();
-                     }
-                     else
-                     {
-                         labelInvoke("Incorrect username or password, please try again.");
-                         emailTextBox.Text = "";
-                         passwordTextBox.Text = "";
-                         
-                     }
-                    
-                } while (message != "User validated.");
-                
-            } // end try
+                Login();
+            } 
+
             catch (Exception error)
             {
                 MessageBox.Show(error.ToString());
-            } 
-             
+            }     
         }
 
-        private void exitButton_Click(object sender, EventArgs e) // Þegar ýtt er á "Exit" takkann
+        void Login()
         {
-            this.Close(); // Ef ýtt er á exit takka þá slökknar á forritinu
+            do
+            {
+                writer.Write(clientInput);
+                message = reader.ReadString();
+
+                if (message.Contains("User validated"))
+                {
+                    string[] msgSplit = message.Split(':');
+                    username = msgSplit[1];
+                    this.Invoke(new MethodInvoker(this.Hide));
+                    Form2 f2 = new Form2(this);
+                    f2.Show();
+
+                    Application.Run(new Form2(this));
+                    done = true;
+                }
+
+                else if (message == "User registered.")
+                {
+                    DisplayRegErrorLabel("User succesfully registered! Please sign in.");
+                    done = true;
+                    
+                }
+                else if (message == "U/P incorrect")
+                {
+                    DisplayErrorLabel("Incorrect username or password, please try again.");
+                    done = true;
+                }
+
+            } while (!done);
         }
 
-        private void loginButton_Click(object sender, EventArgs e) // Þegar ýtt er á "Sign in" takkann
+        private void loginButton_Click(object sender, EventArgs e)
         {
-            new Thread(new ThreadStart(Connect)).Start();
-            
+            clientInput ="LOGIN:" + EmailTextBox.Text + ":" + PasswordTextBox.Text;
+            Connect();
         }
 
-        public void labelInvoke(string value) //Method til að geta breytt um texta í errorLabel úr öðrum en "main" þræði.
+        private void signupButton_Click(object sender, EventArgs e)
+        {
+            clientInput = "REGISTER:" + SignupEmailTextBox.Text + ":" + SignupDisplayNameTextBox.Text + ":" + SignupPasswordTextBox.Text;
+            if (SignupEmailTextBox.Text == "" || SignupDisplayNameTextBox.Text == "" || SignupPasswordTextBox.Text == "")
+            {
+                    regErrorLabel.Text = "None of the register fields may be empty";
+                    SignupDisplayNameTextBox.Text = "";
+                    SignupEmailTextBox.Text = "";
+                    SignupPasswordTextBox.Text = "";
+            }
+            else if(!SignupEmailTextBox.Text.Contains("@"))
+            {
+                regErrorLabel.Text = "Please enter a valid email address";
+            }
+            else
+            {
+                Connect();
+            }
+        }
+
+        private delegate void DisplayDelegate(string message);
+
+        private void DisplayRegErrorLabel(string message)
+        {
+            if (regErrorLabel.InvokeRequired)
+            {
+                Invoke(new DisplayDelegate(DisplayRegErrorLabel),
+                    new object[] { message });
+            }
+            else
+                regErrorLabel.Text = message;
+        }
+
+        private void DisplayErrorLabel(string message)
         {
             if (errorLabel.InvokeRequired)
             {
-                this.BeginInvoke(new Action<string>(labelInvoke), new object[] { value });
-                return;
+                Invoke(new DisplayDelegate(DisplayErrorLabel),
+                    new object[] { message });
             }
-            errorLabel.Text += value;
+            else
+                errorLabel.Text = message;
+        }
+        
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
